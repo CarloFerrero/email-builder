@@ -1,0 +1,24 @@
+.header-container {
+  background-color: var(--smokyBlack);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0% 6% 0% 6%;
+}
+.logo-container,
+.menu-container,
+.login-container {
+  width: 30%;
+}
+
+.login-container {
+  text-align: right;
+}
+.menu-container {
+  text-align: center;
+}
+
+.logo {
+  color: var(--cultured);
+  font-weight: 500;
+}
