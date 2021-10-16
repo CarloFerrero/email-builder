@@ -1,10 +1,8 @@
 import React from "react";
+import AddProjectBar from "../AddProjectBar";
 import "./style.css";
 
-const SearchBarTitle = () => {
-  const HandleClick = () => {
-    console.log("click");
-  };
+const SearchBarTitle = (props) => {
   return (
     <div className="search-main">
       <div className="form-project">
@@ -13,7 +11,7 @@ const SearchBarTitle = () => {
         </div>
         <div className="addProject">
           <input
-            onClick={HandleClick}
+            onClick={props.changeBar}
             type="submit"
             className="btn-add-project"
             value="+ Aggiungi attività"

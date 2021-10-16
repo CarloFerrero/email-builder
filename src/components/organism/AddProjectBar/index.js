@@ -21,6 +21,7 @@ const AddProjectBar = (props) => {
     setProject([...project, newProject]);
     refTitle.current.value = "";
     props.addProject(newProject);
+    props.changeBar();
   };
 
   return (

@@ -1,14 +1,18 @@
 import React, { useState } from "react";
 //component
-import { AddProjectBar, Footer, Header, ProjectCard } from "../../components";
+import {
+  AddProjectBar,
+  Footer,
+  Header,
+  ProjectCard,
+  SearchBarTitle,
+} from "../../components";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { CodeEditor, Designer, DashboardMain } from "../index";
 
 const App = () => {
   const [project, setProject] = useState([]);
-  const addProject = (newProject) => {
-    setProject([...project, newProject]);
-  };
+  const [state, setState] = useState("SearchBarTitle");
 
   const listProjectCard = project.map((prop) => (
     <ProjectCard
@@ -23,7 +27,17 @@ const App = () => {
     <div>
       <Router>
         <Header />
-        <AddProjectBar addProject={addProject} />
+        <div>
+          {state === "SearchBarTitle" && (
+            <SearchBarTitle changeBar={() => setState("AddProjectBar")} />
+          )}
+          {state === "AddProjectBar" && (
+            <AddProjectBar
+              addProject={(newProject) => setProject([...project, newProject])}
+              changeBar={() => setState("SearchBarTitle")}
+            />
+          )}
+        </div>
         <Switch>
           <Route path="/code-editor">
             <CodeEditor />
