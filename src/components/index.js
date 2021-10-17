@@ -7,6 +7,7 @@ export { default as ProjectCard } from "./atoms/projectCard";
 export { default as SectionTitle } from "./atoms/sectionTitle";
 export { default as Navbar } from "./atoms/navbar";
 export { default as SelectColor } from "./atoms/selectColor";
+export { default as InputField } from "./atoms/InputField";
 
 //organism export
 export { default as AddProjectBar } from "./organism/AddProjectBar";

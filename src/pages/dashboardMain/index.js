@@ -7,16 +7,18 @@ const DashboardMain = (props) => {
   const ProjectUpdated = props.project;
 
   return (
-    <div className="main">
+    <div>
       <div className="space"></div>
       <SectionTitle title="Progetti" />
-      <div className="project-wrapper">{ProjectUpdated}</div>
-      <SectionTitle title="Componenti" />
+      <div className="main">
+        <div className="project-wrapper">{ProjectUpdated}</div>
+      </div>
+      {/*<SectionTitle title="Componenti" />
       <ComponentCard />
       <SectionTitle title="Layout" />
       <LayoutCard />
       <SectionTitle title="Partial" />
-      <LayoutCard />
+  <LayoutCard />*/}
     </div>
   );
 };

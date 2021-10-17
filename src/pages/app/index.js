@@ -49,7 +49,7 @@ const App = () => {
             <DashboardMain project={listProjectCard} />
           </Route>
         </Switch>
-        <Footer />
+        {/* <Footer /> */}
       </Router>
     </div>
   );

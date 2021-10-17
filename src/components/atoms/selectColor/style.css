@@ -4,3 +4,9 @@
 .colors-wrapper {
   margin-right: 20px;
 }
+fieldset.MuiOutlinedInput-notchedOutline.css-1d3z3hw-MuiOutlinedInput-notchedOutline {
+  padding: 0 15px 0px 11px;
+}
+label.MuiInputLabel-root.MuiInputLabel-formControl.MuiInputLabel-animated.MuiInputLabel-sizeSmall.MuiInputLabel-outlined.MuiFormLabel-root.MuiFormLabel-colorPrimary.makeStyles-inputLabel-3.css-1pysi21-MuiFormLabel-root-MuiInputLabel-root {
+  font-size: 0.85rem;
+}

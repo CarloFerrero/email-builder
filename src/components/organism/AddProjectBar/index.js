@@ -1,22 +1,26 @@
 import React, { useState, useRef } from "react";
 import "./style.css";
-import SelectColor from "../../atoms/selectColor";
+import { SelectColor } from "../../index";
+import Button from "@mui/material/Button";
 
 const AddProjectBar = (props) => {
   const [project, setProject] = useState([]);
   const [id, setID] = useState(0);
+  const [Color, setColor] = useState("");
   const refTitle = useRef();
   const handleID = () => {
     setID(id + 1);
   };
-
+  const addColor = (color) => {
+    setColor(color);
+  };
   const handleSubmit = (e) => {
     e.preventDefault();
     handleID();
     const newProject = {
       id: id,
       title: refTitle.current.value,
-      color: "giallo",
+      color: Color,
     };
     setProject([...project, newProject]);
     refTitle.current.value = "";
@@ -35,12 +39,14 @@ const AddProjectBar = (props) => {
           />
         </div>
         <div className="addProject">
-          <SelectColor />
-          <input
-            type="submit"
-            className="btn-add-project"
-            value="+ Aggiungi attività"
-          />
+          <div>
+            <SelectColor addColor={addColor} />
+          </div>
+          <div className="aggiungi-progetto">
+            <Button variant="outlined" type="submit">
+              Aggiungi progetto
+            </Button>
+          </div>
         </div>
       </form>
       <div></div>

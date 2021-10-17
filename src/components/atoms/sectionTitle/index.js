@@ -4,7 +4,9 @@ import "./style.css";
 const SectionTitle = (props) => {
   return (
     <div>
-      <h2 className="sec-title">{props.title}</h2>
+      <div className="main">
+        <h2 className="sec-title">{props.title}</h2>
+      </div>
       <hr className="line" />
     </div>
   );
